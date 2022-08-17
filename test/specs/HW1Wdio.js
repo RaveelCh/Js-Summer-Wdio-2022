@@ -146,4 +146,4 @@ it('Verify empty messenger login flow', async () => {
     expect(newCheckbox, 'Keep me signed in is selected').to.be.true;
 });
 
-})
+})  
