@@ -18,11 +18,11 @@ it('Verify feelsLikeTempValue is between lowTempValue and highTempValue', async 
     await browser.url('https://darksky.net');        
     await browser.pause(4000);
 
-    const feelsLikeTemp = await $('span[class=feels-like-text]');        
+    const feelsLikeTemp = await $('span[class=feels-like-text]').getText();        
 
-    const highTemp = await $('span[class=high-temp-text]');        
+    const highTemp = await $('span[class=high-temp-text]').getText();        
 
-    const lowTemp = await $('span[class=low-temp-text]');                
+    const lowTemp = await $('span[class=low-temp-text]').getText();                
 
     expect((feelsLikeTemp >= lowTemp && feelsLikeTemp <= highTemp), 'FeelsLikeTemp is not between high and low temp').to.be.true;
 });
